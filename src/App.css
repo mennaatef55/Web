@@ -1,38 +1,138 @@
-.App {
+/* === Global Styles === */
+body {
+  background-color: #f8fafc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+h1 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* === App Container === */
+.app-container {
   text-align: center;
+  padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* === Movie Form === */
+.movie-form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 340px;
+  margin: 0 auto 25px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-form:hover {
+  transform: translateY(-2px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-form input,
+.movie-form select,
+.movie-form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+.movie-form input:focus,
+.movie-form select:focus,
+.movie-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 3px rgba(37, 99, 235, 0.4);
+}
+
+.movie-form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.movie-form button:hover {
+  background-color: #1e40af;
+}
+
+/* === Movie List === */
+.movie-list {
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* === Movie Item === */
+.movie-item {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-item h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.movie-item p {
+  margin: 6px 0;
+  color: #334155;
+}
+
+.movie-item strong {
+  color: #1e293b;
+}
+
+/* === Remove Button === */
+.movie-item button {
+  background-color: #dc2626;
   color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-item button:hover {
+  background-color: #991b1b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* === Responsive Design === */
+@media (max-width: 480px) {
+  .movie-form {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie-list {
+    width: 95%;
   }
 }
