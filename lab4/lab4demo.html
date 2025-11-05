@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Lab 4 Demo</title>
+  <link rel="stylesheet" href="lab4demo.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>To-Do App</h1>
+
+    <div class="input">
+      <input type="text" placeholder="What needs doing?"
+       class="inputElement">
+      <button class="addButton">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" 
+      data-filter="completed">Completed</button>
+      <button class="clearAll">Clear All</button>
+    </div>
+
+    <ul class="todoItems"></ul>
+  </div>
+
+  <script src="lab4demo.js"></script>
+</body>
+</html>
